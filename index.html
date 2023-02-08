@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirTour | Inicio</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ESTILOS PERSONALIZADOS -->
+    <link rel="stylesheet" type="text/css" href="/css/estilos.css">
+
+    <!-- LINK DE FUENTE ... -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,900&display=swap" rel="stylesheet">
+
+    <!-- LINK DE FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/img/inicio/flecha.ico">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <main>
+        <div class="container-fluid mb-4 p-0">
+            <!-- MENÚ DE LA PÁGINA -->
+            <header class="d-flex flex-wrap py-3 mb-4 border-bottom">
+                <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="/index.html">
+                            <img id="logo" src="/img/inicio/logo.png" alt="logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link m-2 fs-5 fw-bolder d-flex" href="/index.html"><img
+                                            src="/img/iconos/icon-inicio.svg" alt="Inicio">
+                                        <p class="text-light mb-0 mx-2">Inicio</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link m-2 fs-5 fw-bolder d-flex" href="/html/lugares.html"><img
+                                            src="/img/iconos/icon-lugar.svg" class="icon-menu" alt="Lugares">
+                                        <p class="mb-0 mx-2">Lugares</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link m-2 fs-5 fw-bolder d-flex" href="/html/paquetes.html"><img
+                                            src="/img/iconos/icon-paquete.svg" class="icon-menu" alt="Paquetes">
+                                        <p class="mb-0 mx-2">Paquetes</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link m-2 fs-5 fw-bolder d-flex" href="/html/nosotros.html"><img
+                                            src="/img/iconos/icon-nosotros.svg" class="icon-menu" alt="Nosotros">
+                                        <p class="mb-0 mx-2">Nosotros</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link m-2 fs-5 fw-bolder d-flex" href="/html/contacto.html"><img
+                                            src="/img/iconos/icon-contacto.svg" class="icon-menu" alt="Contacto">
+                                        <p class="mb-0 mx-2">Contacto</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <form id="search" class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                                <button class="btn btn-outline-light fw-bolder" type="submit">Buscar</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <!---->
+
+            <!-- SECCIÓN DE INICIO -->
+            <section class="container-fluid p-0">
+                <div id="hero" class="text-light">
+                    <h1 class="fw-bold" style="font-size: 4.5rem;">TE LLEVAMOS AL VIAJE DE TUS SUEÑOS</h1>
+                    <h6 class="text-uppercase fs-2 fw-bold">Viaja por todo el Perú y cumple tus sueños de estar por lo
+                        aires, con precios únicos</h6>
+                </div>
+            </section>
+            <!---->
+
+            <!-- SECCIÓN DE INPUT -->
+            <div id="input" class="container text-light p-4 my-5"
+                style="background-color: #270570; border-radius: 1.5rem;">
+                <h3 class="text-center fw-bold">= VIAJE SEGURO =</h3>
+
+                <div class="d-flex fs-5" style="justify-content: center;">
+                    <div class="form-check form-switch mx-5 my-2">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Viaje de Ida</label>
+                    </div>
+                    <div class="form-check form-switch mx-5 my-2">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Viaje de Ida y Vuelta</label>
+                    </div>
+                </div>
+
+                <div class="row my-3" style="justify-content: center;">
+                    <!-- Origen-->
+                    <div class="col-md-4">
+                        <select id="ciudad" class="form-select fs-5 my-2">
+                            <option value="todos">Origen</option>
+                            <option value="valor1">Lima</option>
+                            <option value="valor2">Piura</option>
+                            <option value="valor3">Mancora</option>
+                            <option value="valor4">Arequipa</option>
+                            <option value="valor5">Cusco</option>
+                            <option value="valor6">Iquitos</option>
+                            <option value="valor7">Huaraz</option>
+                        </select>
+                    </div>
+
+                    <!--Destino-->
+                    <div class="col-md-4">
+                        <select id="lugar" class="form-select fs-5 my-2">
+                            <option value="todos">Destino</option>
+                            <option value="valor8">Lima</option>
+                            <option value="valor9">Piura</option>
+                            <option value="valor10">Mancora</option>
+                            <option value="valor11">Arequipa</option>
+                            <option value="valor12">Cusco</option>
+                            <option value="valor13">Iquitos</option>
+                            <option value="valor14">Huaraz</option>
+                        </select>
+                    </div>
+
+                    <!--Calentario-->
+                    <div class="col-md-4">
+                        <input type="date" id="date" class="fs-5 px-5 my-2 w-100"
+                            style="align-items: center; justify-content: center; padding: 6px 6px;">
+                    </div>
+                </div>
+
+                <div class="row my-3">
+                    <div class="col-md-12">
+                        <!--Cantidad de Pasajeros-->
+                        <div id="personas-num" class="navbar text-center" style="justify-content: center;">
+                            <div class="fs-5 mx-5 my-1">
+                                (Adulto 11-54):<input type="number" id="numero" placeholder="--" min="1" max="15"
+                                    class="mx-3 rounded-pill ps-3">
+                            </div>
+                            <div class="fs-5 mx-5 my-1">
+                                (Niño 3-10):<input type="number" id="number" placeholder="--" min="1" max="15"
+                                    class="mx-3 rounded-pill ps-3">
+                            </div>
+                            <div class="fs-5 mx-5 my-1">
+                                (Adulto Mayor 55+):<input type="number" id="num" placeholder="--" min="1" max="15"
+                                    class="mx-3 rounded-pill ps-3">
+                            </div>
+                            <div class="mx-5">
+                                <a href="/html/paquetes.html"><i
+                                        class="fa-solid fa-magnifying-glass text-light fs-3"></i></a>
+                            </div>
+                        </div>
+                        <!---->
+                    </div>
+                </div>
+            </div>
+            <!---->
+
+            <!-- SECCIÓN DE SERVICIOS -->
+            <section class="container-fluid p-0">
+                <div class="row px-2 my-3 m-0 w-100">
+                    <div class="col-md-12">
+                        <h2 class="text-center fs-1 fw-bold">SERVICIOS DE VIAJES</h2>
+                    </div>
+                </div>
+                <div class="row w-100 m-0">
+                    <!-- SERVICIO 1 -->
+                    <div class="col-md-4 px-5 py-2">
+                        <div class="card">
+                            <img class="card-img-top" src="/img/inicio/reclinacion140.png" alt="Card image cap"
+                                style="border-radius: 1rem;">
+                            <div class="card-body" style="font-size: 1.2rem;">
+                                <h5 class="card-title text-center fs-3 fw-bold pb-2">Servicio Economico 140°</h5>
+                                <p class="card-text">◉ Permitido hasta 2 maletas de 15kg c/u</p>
+                                <p class="card-text">◉ Wifi incluido(Red Social)</p>
+                                <p class="card-text">◉ Servicio de Snack</p>
+                                <p class="card-text">◉ Aire Acondicionado</p>
+                                <p class="card-text">◉Calefacción</p>
+                                <p class="card-text">◉ Luz de Lectura</p>
+                                <p class="card-text">◉ Pantalla cada 6 asientos</p>
+                                <p class="card-text">ㅤ</p>
+                                <p class="card-text">ㅤ</p>
+                                <a href="#" onclick="myFunction()" class="btn btn-color text-light w-100">Adquirir
+                                    servicio
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+
+                    <!-- SERVICIO 2 -->
+                    <div class="col-md-4 px-5 py-2">
+                        <div class="card">
+                            <img class="card-img-top" src="/img/inicio/reclinacion160.png" alt="Card image cap"
+                                style="border-radius: 1rem;">
+                            <div class="card-body" style="font-size: 1.2rem;">
+                                <h5 class="card-title text-center fs-3 fw-bold pb-2">Servicio Regular 160°</h5>
+                                <p class="card-text">◉ Permitido hasta 2 maletas de 20kg c/u</p>
+                                <p class="card-text">◉ Wifi incluido (Red Social)</p>
+                                <p class="card-text">◉ Servicio a bordo</p>
+                                <p class="card-text">◉ Aire Acondicionado</p>
+                                <p class="card-text">◉ Calefacción</p>
+                                <p class="card-text">◉ Luz de lectura individual</p>
+                                <p class="card-text">◉ Pantalla individual</p>
+                                <p class="card-text">◉ Cargador Cable USB</p>
+                                <p class="card-text">ㅤ</p>
+                                <a href="#" onclick="myFunction()" class="btn btn-color text-light w-100">Adquirir
+                                    Servicio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+
+                    <!-- SERVICIO 3 -->
+                    <div class="col-md-4 px-5 py-2">
+                        <div class="card">
+                            <img class="card-img-top" src="/img/inicio/reclinacion180.png" alt="Card image cap"
+                                style="border-radius: 1rem;">
+                            <div class="card-body" style="font-size: 1.2rem;">
+                                <h5 class="card-title text-center fs-3 fw-bold pb-2">Servicio VIP 180°</h5>
+                                <p class="card-text">◉ Permitido hasta 3 maletas de 20kg c/u</p>
+                                <p class="card-text">◉ Wifi incluido (Red Social)</p>
+                                <p class="card-text">◉ Servicio a bordo A1</p>
+                                <p class="card-text">◉ Aire Acondicionado</p>
+                                <p class="card-text">◉ Calefacción</p>
+                                <p class="card-text">◉ Luz de lectura individual</p>
+                                <p class="card-text">◉ Pantalla individual en 3D</p>
+                                <p class="card-text">◉ Cargador Cable USB</p>
+                                <p class="card-text">◉ Mantita</p>
+                                <a href="#" onclick="myFunction()" class="btn btn-color text-light w-100">Adquirir
+                                    Servicio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+            </section>
+            <!---->
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-center text-white">
+        <div class="container p-4">
+            <!-- Terminos y condiciones -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="text-uppercase fw-bold">TÉRMINOS Y CONDICIONES</h5>
+                    <p class="m-0"> - Le comentamos que para realizar algún cambio, hacerlo con anticipación mínimo de
+                        1hr antes.</p>
+                    <p class="m-0"> - El boleto no es cancelable, reembolsable, el cambio de nombre no esta permitido.
+                    </p>
+                    <p class="m-0"> - No esta permitido, bolsas, armas letales o cajas.</p>
+                    <p class="m-0"> - Solo se permite, maletas, maletines o mochilas.</p>
+                    <p class="m-0"> - Es obligatorio que el cliente porte durante todo su viaje sus documentos.</p>
+                    <p class="m-0"> - Para abordar no debe presentar ningun síntoma de COVID.</p>
+                    <p class="m-0"> - Presentar Carnet de Vacunacion (Mínimo 2 DOSIS).</p>
+                </div>
+            </div>
+            <!---->
+
+        </div>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            @AirTourOnline
+            <a class="text-light" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!---->
+    </footer>
+    <!---->
+
+    <!-- SCRIPT MENSAJE EMERGENTE -->
+    <script>
+        function myFunction() {
+            alert("Servicio Adquirido, visita nuestra página de Paquetes para más información!");
+        }
+    </script>
+    <!---->
+
+    <!-- CONTADOR DE AÑOS -->
+    <div class="container-fluid bg-light">
+        <span class="text-muted">AIRTOUR ©
+            <script>document.write(new Date().getFullYear())</script>
+        </span>
+    </div>
+    <!---->
+
+    <script src="https://kit.fontawesome.com/15e6c0ec3f.js" crossorigin="anonymous"></script>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

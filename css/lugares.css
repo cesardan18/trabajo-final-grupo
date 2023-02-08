@@ -1,0 +1,113 @@
+/* ESTILOS GENERALES */
+body {
+    background-color: rgb(236, 236, 236);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+section[id] {
+    scroll-margin-top: 3.75rem;
+}
+
+nav {
+    background-color: #270570;
+}
+
+
+.form-control:hover {
+    box-shadow: 2px 2px 5px 3px #0f022b;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 2px 2px 5px 3px #0f022b;
+}
+
+#logo:hover {
+    opacity: 0.5;
+}
+
+.icon-menu {
+    opacity: 0.5;
+}
+
+#menu>li>a:hover {
+    opacity: 0.2;
+}
+
+/**/
+
+/* PARALLAX */
+.parallax,
+.parallax2,
+.parallax3,
+.parallax4,
+.parallax5,
+.parallax6 {
+    /* The image used */
+    opacity: 90%;
+    border-radius: 2rem;
+    /* Set a specific height */
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    width: 80%;
+    opacity: 1;
+    border-radius: 1.25rem;
+    background: rgba(240, 230, 220, .7);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 700px) {
+    .title {
+        width: 90%;
+    }
+}
+
+/* IMÁGEN DE PARALLAX */
+.parallax {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1)), url("/img/lugares/mancora.png");
+}
+
+.parallax2 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1)), url("/img/lugares/cusco.png");
+}
+
+.parallax3 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1)), url("/img/lugares/huaraz.png");
+}
+
+.parallax4 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1)), url("/img/lugares/arequipa.png");
+}
+
+.parallax5 {
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1)), url("/img/lugares/iquitos.png");
+}
+
+/* */

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirTour | Paquetes</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ESTILOS PERSONALIZADOS -->
+    <link rel="stylesheet" type="text/css" href="/css/paquetes.css">
+
+    <!-- LINK DE FUENTE ... -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,900&display=swap" rel="stylesheet">
+
+    <!-- LINK DE FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/img/inicio/flecha.ico">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <main>
+        <div class="container-fluid mb-4 p-0">
+            <!-- MENÚ DE LA PÁGINA -->
+            <header class="d-flex flex-wrap py-3 mb-4 border-bottom">
+                <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="/index.html">
+                            <img id="logo" src="/img/inicio/logo.png" alt="logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link m-2 fs-5 fw-bolder d-flex" href="/index.html"><img
+                                            src="/img/iconos/icon-inicio.svg" class="icon-menu" alt="Inicio">
+                                        <p class="mb-0 mx-2">Inicio</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link m-2 fs-5 fw-bolder d-flex" href="/html/lugares.html"><img
+                                            src="/img/iconos/icon-lugar.svg" class="icon-menu" alt="Lugares">
+                                        <p class="mb-0 mx-2">Lugares</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link m-2 fs-5 fw-bolder d-flex" href="/html/paquetes.html"><img
+                                            src="/img/iconos/icon-paquete.svg" alt="Paquetes">
+                                        <p class="text-light mb-0 mx-2">Paquetes</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link m-2 fs-5 fw-bolder d-flex" href="/html/nosotros.html"><img
+                                            src="/img/iconos/icon-nosotros.svg" class="icon-menu" alt="Nosotros">
+                                        <p class="mb-0 mx-2">Nosotros</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link m-2 fs-5 fw-bolder d-flex" href="/html/contacto.html"><img
+                                            src="/img/iconos/icon-contacto.svg" class="icon-menu" alt="Contacto">
+                                        <p class="mb-0 mx-2">Contacto</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                                <button class="btn btn-outline-light fw-bolder" type="submit">Buscar</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <!---->
+
+            <!-- FILTRADOR -->
+            <h1 class="text-center fw-bold pt-5">FILTRA EL VIAJE QUE SE ACOMODE A TU GUSTO!!!</h1>
+            <div id="select" class="container text-center p-3 d-flex"
+                style="background-color: #270570; border-radius: 1.5rem;">
+                <select id="viaje" class="form-select fs-5 fw-bold text-center my-2">
+                    <option value="all">Tipo de Viaje</option>
+                    <option value="vip">Viaje Vip (Presupuesto alto)</option>
+                    <option value="regular">Viaje Regular (Presupuesto medio y bajo)</option>
+                    <option value="economico">Viaje Económico (Presupuesto medio y bajo)</option>
+                </select>
+
+                <select id="presupuesto" class="form-select fs-5 fw-bold text-center my-2">
+                    <option value="all">Presupuesto</option>
+                    <option value="alto">Presupuesto Alto</option>
+                    <option value="medio">Presupuesto Medio</option>
+                    <option value="bajo">Presupuesto Bajo</option>
+                </select>
+
+                <select id="duracion" class="form-select fs-5 fw-bold text-center my-2">
+                    <option value="all">Duración</option>
+                    <option value="largo">7 - 12 días</option>
+                    <option value="mediano">4 - 6 días</option>
+                    <option value="corto">1 - 3 días</option>
+                </select>
+            </div>
+            <!---->
+
+            <!-- SECCIÓN DE PAQUETES -->
+            <section class="container-fluid bg-trasparent my-4 px-3">
+
+                <!-- PAQUETES IMBATIBLES -->
+                <div id="paquetes" class="row px-2 pb-5 my-4 m-0 w-100">
+                    <div class="col-md-12 mb-2">
+                        <div class="text-center">
+                            <h2 class="fs-1 fw-bold">PAQUETES IMBATIBLES</h2>
+                            <h3 class="fs-4 fw-bold" style="color: rgb(102, 102, 102)">¿Sabías que es más económico
+                                comprar tu vuelo y alojamiento juntos?</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="vip" data-presupuesto="alto"
+                                    data-duracion="corto">
+                                    <img src="/img/paquetes/playa-mancora.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">3 DÍAS / 2
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">PAQUETE VIP</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Paquete Playa Mancora</h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Mancora - Piura</small>
+                                        </h6>
+                                        <div class="d-flex pt-1">
+                                            <p class="text-light px-1 rounded" style="background-color: #03a691;">8.1
+                                            </p>
+                                            <p class="px-2">⭐⭐⭐⭐⭐</p>
+                                        </div>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Partiendo desde Lima</p>
+                                                <p class="m-0">Hotel + Vuelo + Traslado + Asistencia</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Ahorras <span style="color: #03a691;">S/455</span></p>
+                                        </div>
+                                        <p class="text-muted fw-bold mb-0">Precio final por persona</p>
+                                        <p class="mb-0 text-decoration-line-through text-muted">S/1,500</p>
+                                        <p class="fs-2 fw-bolder mb-0">S/1,045</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VIAJE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="vip" data-presupuesto="alto"
+                                    data-duracion="mediano">
+                                    <img src="/img/paquetes/machu-pichu.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">5 DÍAS / 4
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">PAQUETE VIP</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Paquete a Machu Pichu
+                                        </h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Cuzco</small>
+                                        </h6>
+                                        <div class="d-flex pt-1">
+                                            <p class="text-light px-1 rounded" style="background-color: #03a691;">8.9
+                                            </p>
+                                            <p class="px-2">⭐⭐⭐⭐⭐</p>
+                                        </div>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Partiendo desde Lima</p>
+                                                <p class="m-0">Hotel + Vuelo + Traslado + Asistencia</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Ahorras <span style="color: #03a691;">S/330</span></p>
+                                        </div>
+                                        <p class="text-muted fw-bold mb-0">Precio final por persona</p>
+                                        <p class="mb-0 text-decoration-line-through text-muted">S/1,350</p>
+                                        <p class="fs-2 fw-bolder mb-0">S/1020</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VIAJE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="regular" data-presupuesto="medio"
+                                    data-duracion="mediano">
+                                    <img src="/img/paquetes/misti.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">5 DÍAS / 4
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">PAQUETE REGULAR</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Paquete a Misti</h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Arequipa</small>
+                                        </h6>
+                                        <div class="d-flex pt-1">
+                                            <p class="text-light px-1 rounded" style="background-color: #03a691;">7.3
+                                            </p>
+                                            <p class="px-2">⭐⭐⭐⭐</p>
+                                        </div>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Partiendo desde Lima</p>
+                                                <p class="m-0">Hotel + Vuelo + Traslado</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Ahorras <span style="color: #03a691;">S/230</span></p>
+                                        </div>
+                                        <p class="text-muted fw-bold mb-0">Precio final por persona</p>
+                                        <p class="mb-0 text-decoration-line-through text-muted">S/980</p>
+                                        <p class="fs-2 fw-bolder mb-0">S/735</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VIAJE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="regular" data-presupuesto="bajo"
+                                    data-duracion="corto">
+                                    <img src="/img/paquetes/glaciar-pastouri.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">2 DÍAS / 1
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">PAQUETE REGULAR</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Paquete a Glaciar Pastoruri
+                                        </h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Huaraz</small>
+                                        </h6>
+                                        <div class="d-flex pt-1">
+                                            <p class="text-light px-1 rounded" style="background-color: #03a691;">7.5
+                                            </p>
+                                            <p class="px-2">⭐⭐⭐⭐</p>
+                                        </div>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Partiendo desde Lima</p>
+                                                <p class="m-0">Hotel + Vuelo + Traslado + Asistencia</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Ahorras <span style="color: #03a691;">S/300</span></p>
+                                        </div>
+                                        <p class="text-muted fw-bold mb-0">Precio final por persona</p>
+                                        <p class="mb-0 text-decoration-line-through text-muted">S/900</p>
+                                        <p class="fs-2 fw-bolder mb-0">S/600</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VIAJE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 m-0">
+                        <div class="row">
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="economico" data-presupuesto="medio"
+                                    data-duracion="medio">
+                                    <img src="/img/paquetes/laguna-69.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">6 DÍAS / 5
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">PAQUETE ECONÓMICO</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Paquete a Laguna 69</h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Huaraz</small>
+                                        </h6>
+                                        <div class="d-flex pt-1">
+                                            <p class="text-light px-1 rounded" style="background-color: #03a691;">8.0
+                                            </p>
+                                            <p class="px-2">⭐⭐⭐⭐</p>
+                                        </div>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Partiendo desde Lima</p>
+                                                <p class="m-0">Hotel + Vuelo + Traslado + Asistencia</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Ahorras <span style="color: #03a691;">S/110</span></p>
+                                        </div>
+                                        <p class="text-muted fw-bold mb-0">Precio final por persona</p>
+                                        <p class="mb-0 text-decoration-line-through text-muted">S/890</p>
+                                        <p class="fs-2 fw-bolder mb-0">S/780</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VIAJE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="economico" data-presupuesto="bajo"
+                                    data-duracion="corto">
+                                    <img src="/img/paquetes/boulevard-iquitos.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">3 DÍAS / 2
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">PAQUETE ECONÓMICO</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Paquete a Boulevard Iquitos
+                                        </h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Iquitos</small>
+                                        </h6>
+                                        <div class="d-flex pt-1">
+                                            <p class="text-light px-1 rounded" style="background-color: #03a691;">7.5
+                                            </p>
+                                            <p class="px-2">⭐⭐⭐⭐</p>
+                                        </div>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Partiendo desde Lima</p>
+                                                <p class="m-0">Vuelo + Traslado</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Ahorras <span style="color: #03a691;">S/60</span></p>
+                                        </div>
+                                        <p class="text-muted fw-bold mb-0">Precio final por persona</p>
+                                        <p class="mb-0 text-decoration-line-through text-muted">S/560</p>
+                                        <p class="fs-2 fw-bolder mb-0">S/500</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VIAJE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="economico" data-presupuesto="bajo"
+                                    data-duracion="corto">
+                                    <img src="/img/paquetes/vichayto.webp" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">2 DÍAS / 1
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">PAQUETE ECONÓMICO</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Paquete a Playa Vichayto
+                                        </h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Mancora - Piura</small>
+                                        </h6>
+                                        <div class="d-flex pt-1">
+                                            <p class="text-light px-1 rounded" style="background-color: #03a691;">8.2
+                                            </p>
+                                            <p class="px-2">⭐⭐⭐⭐</p>
+                                        </div>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Partiendo desde Lima</p>
+                                                <p class="m-0">Vuelo + Traslado</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Ahorras <span style="color: #03a691;">S/180</span></p>
+                                        </div>
+                                        <p class="text-muted fw-bold mb-0">Precio final por persona</p>
+                                        <p class="mb-0 text-decoration-line-through text-muted">S/670</p>
+                                        <p class="fs-2 fw-bolder mb-0">S/490</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VIAJE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="economico" data-presupuesto="bajo"
+                                    data-duracion="largo">
+                                    <img src="/img/paquetes/qurikancha.webp" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">7 DÍAS / 6
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">PAQUETE ECONÓMICO</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Paquete a Qurikancha</h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Cuzco</small>
+                                        </h6>
+                                        <div class="d-flex pt-1">
+                                            <p class="text-light px-1 rounded" style="background-color: #03a691;">7.0
+                                            </p>
+                                            <p class="px-2">⭐⭐⭐⭐</p>
+                                        </div>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Partiendo desde Lima</p>
+                                                <p class="m-0">Vuelo + Traslado</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Ahorras <span style="color: #03a691;">S/120</span></p>
+                                        </div>
+                                        <p class="text-muted fw-bold mb-0">Precio final por persona</p>
+                                        <p class="mb-0 text-decoration-line-through text-muted">S/790</p>
+                                        <p class="fs-2 fw-bolder mb-0">S/670</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VIAJE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VUELOS -->
+                    <div class="col-md-12 mb-2 mt-5">
+                        <div class="text-center">
+                            <h2 class="fs-1 fw-bold">VUELOS IMBATIBLES</h2>
+                            <h3 class="fs-4 fw-bold" style="color: rgb(102, 102, 102)">¿Sabías que estas rutas acaban de
+                                bajar de precio?</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="vip" data-presupuesto="alto"
+                                    data-duracion="largo">
+                                    <img src="/img/paquetes/rio-nanay.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">10 DÍAS / 9
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">VUELO VIP</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Vuelo a Río Nanay</h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Iquitos</small>
+                                        </h6>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Saliendo desde Lima</p>
+                                                <p class="m-0">Ida y Vuelta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Oferta <span style="color: #03a691;">Imbatible</span></p>
+                                        </div>
+                                        <p class="fs-2 fw-bolder mb-0">S/1,020</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VUELO</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="vip" data-presupuesto="alto"
+                                    data-duracion="medio">
+                                    <img src="/img/paquetes/huascaran.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">4 DÍAS / 3
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">VUELO VIP</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Vuelo a Huascarán</h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Huaraz</small>
+                                        </h6>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Saliendo desde Lima</p>
+                                                <p class="m-0">Ida y Vuelta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Oferta <span style="color: #03a691;">Imbatible</span></p>
+                                        </div>
+                                        <p class="fs-2 fw-bolder mb-0">S/980</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VUELO</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="regular" data-presupuesto="medio"
+                                    data-duracion="medio">
+                                    <img src="/img/paquetes/cañon-del-colca.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">5 DÍAS / 6
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">VUELO REGULAR</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Vuelo al Cañon del Colca
+                                        </h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Arequipa</small>
+                                        </h6>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Saliendo desde Lima</p>
+                                                <p class="m-0">Ida y Vuelta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Oferta <span style="color: #03a691;">Imbatible</span></p>
+                                        </div>
+                                        <p class="fs-2 fw-bolder mb-0">S/750</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VUELO</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="regular" data-presupuesto="bajo"
+                                    data-duracion="corto">
+                                    <img src="/img/paquetes/moray.jpeg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">3 DÍAS / 2
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">VUELO REGULAR</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Vuelo a Moray</h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Cuzco</small>
+                                        </h6>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Saliendo desde Lima</p>
+                                                <p class="m-0">Ida y Vuelta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Oferta <span style="color: #03a691;">Imbatible</span></p>
+                                        </div>
+                                        <p class="fs-2 fw-bolder mb-0">S/435</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VUELO</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 m-0">
+                        <div class="row">
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="economico" data-presupuesto="bajo"
+                                    data-duracion="largo">
+                                    <img src="/img/paquetes/playa-pocitas.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">7 DÍAS / 6
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">VUELO ECONÓMICO</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Vuelo a Playa Las Pocitas
+                                        </h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Mancora - Piura</small>
+                                        </h6>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Saliendo desde Lima</p>
+                                                <p class="m-0">Ida y Vuelta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Oferta <span style="color: #03a691;">Imbatible</span></p>
+                                        </div>
+                                        <p class="fs-2 fw-bolder mb-0">S/320</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VUELO</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="economico" data-presupuesto="bajo"
+                                    data-duracion="largo">
+                                    <img src="/img/paquetes/montaña-arcoiris.webp" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">12 DÍAS / 11
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">VUELO ECONÓMICO</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Vuelo a la Montaña Arcoiris
+                                        </h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Cuzco</small>
+                                        </h6>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Saliendo desde Lima</p>
+                                                <p class="m-0">Ida y Vuelta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Oferta <span style="color: #03a691;">Imbatible</span></p>
+                                        </div>
+                                        <p class="fs-2 fw-bolder mb-0">S/659</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VUELO</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="economico" data-presupuesto="bajo"
+                                    data-duracion="medio">
+                                    <img src="/img/paquetes/mundo-alpaca.webp" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">4 DÍAS / 3
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">VUELO ECONÓMICO</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Vuelo a Mundo Alpaca</h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Arequipa</small>
+                                        </h6>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Saliendo desde Lima</p>
+                                                <p class="m-0">Ida y Vuelta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Oferta <span style="color: #03a691;">Imbatible</span></p>
+                                        </div>
+                                        <p class="fs-2 fw-bolder mb-0">S/300</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VUELO</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 my-2">
+                                <div class="card shadow-sm" data-viaje="economico" data-presupuesto="medio"
+                                    data-duracion="largo">
+                                    <img src="/img/paquetes/malecon.jpg" class="card-img-top w-100" alt="...">
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <span class="float-start badge rounded-pill bg-color">7 DÍAS / 6
+                                                NOCHES</span>
+                                        </div>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">VUELO ECONÓMICO</small>
+                                        </h6>
+                                        <h5 class="card-title fs-5 fw-bold text-start mb-0">Vuelo a Malecón Tarapaca
+                                        </h5>
+                                        <h6 class="card-text text-start">
+                                            <small class="text-muted fw-bold">En Iquitos</small>
+                                        </h6>
+                                        <div class="card-text text-start">
+                                            <div class="text-muted" style="font-size: 0.875em;">
+                                                <p class="fw-bold m-0">Saliendo desde Lima</p>
+                                                <p class="m-0">Ida y Vuelta</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <p class="fw-bold px-1 m-0 rounded" style="background-color: #e4f9e2;">
+                                                Oferta <span style="color: #03a691;">Imbatible</span></p>
+                                        </div>
+                                        <p class="fs-2 fw-bolder mb-0">S/700</p>
+                                        <p class="text-muted">Incluye impuestos, tasas y cargos</p>
+                                        <div class="d-grid gap-2 my-2">
+                                            <a href="#" onclick="myFunction()" class="btn btn-color text-light">COMPRAR
+                                                VUELO</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+                <!---->
+            </section>
+            <!---->
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-center text-white">
+        <div class="container p-4">
+            <!-- Terminos y condiciones -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="text-uppercase fw-bold">TÉRMINOS Y CONDICIONES</h5>
+                    <p class="m-0"> - Le comentamos que para realizar algún cambio, hacerlo con anticipación mínimo de
+                        1hr antes.</p>
+                    <p class="m-0"> - El boleto no es cancelable, reembolsable, el cambio de nombre no esta permitido.
+                    </p>
+                    <p class="m-0"> - No esta permitido, bolsas, armas letales o cajas.</p>
+                    <p class="m-0"> - Solo se permite, maletas, maletines o mochilas.</p>
+                    <p class="m-0"> - Es obligatorio que el cliente porte durante todo su viaje sus documentos.</p>
+                    <p class="m-0"> - Para abordar no debe presentar ningun síntoma de COVID.</p>
+                    <p class="m-0"> - Presentar Carnet de Vacunacion (Mínimo 2 DOSIS).</p>
+                </div>
+            </div>
+            <!---->
+
+        </div>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            @AirTourOnline
+            <a class="text-light" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!---->
+    </footer>
+    <!---->
+
+    <!-- SCRIPT MENSAJE EMERGENTE -->
+    <script>
+        function myFunction() {
+            alert("Gracias por la compra, disfrute su viaje!");
+        }
+    </script>
+    <!---->
+
+    <!-- SCRIPT PARA FILTRO -->
+    <script>
+        const paquetes = document.querySelector('#paquetes');
+        const cards = paquetes.querySelectorAll('.card');
+        const viajeSelect = document.querySelector('#viaje');
+        const presupuestoSelect = document.querySelector('#presupuesto');
+        const duracionSelect = document.querySelector('#duracion');
+
+        viajeSelect.addEventListener('change', handleFilterChange);
+        presupuestoSelect.addEventListener('change', handleFilterChange);
+        duracionSelect.addEventListener('change', handleFilterChange);
+
+        function handleFilterChange() {
+            const selectedViaje = viajeSelect.value;
+            const selectedPresupuesto = presupuestoSelect.value;
+            const selectedDuracion = duracionSelect.value;
+
+            cards.forEach(card => {
+                const viaje = card.dataset.viaje;
+                const presupuesto = card.dataset.presupuesto;
+                const duracion = card.dataset.duracion;
+
+                if (
+                    (selectedViaje === 'all' || selectedViaje === viaje) &&
+                    (selectedPresupuesto === 'all' || selectedPresupuesto === presupuesto) &&
+                    (selectedDuracion === 'all' || selectedDuracion === duracion)
+                ) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <!---->
+
+    <!-- CONTADOR DE AÑOS -->
+    <div class="container-fluid m-0 bg-light">
+        <span class="text-muted">AIRTOUR ©
+            <script>document.write(new Date().getFullYear())</script>
+        </span>
+    </div>
+    <!---->
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
