@@ -8,6 +8,7 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+/* BARRA DE SCROLL PERSONALIZADA */
 body::-webkit-scrollbar {
     width: 15px;
 }
@@ -19,6 +20,7 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background-color: #220958;
 }
+/**/
 
 nav {
     background-color: #270570;
