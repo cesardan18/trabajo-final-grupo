@@ -1,0 +1,8 @@
+Hola Profe, aquí está nuestra página.
+
+Está verificada, los integrantes somos:
+- Miguel Angel Yahuayre Zare
+- Cesar Daniel Anastacio Adrianzen
+- Miguel Angel Lopez Deza
+
+Aquí esta el link de netlify:
