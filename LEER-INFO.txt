@@ -7,4 +7,4 @@ Está verificada, los integrantes somos:
 
 Aquí esta el link de netlify:
 
-https://trabajo-final-airtour.netlify.app
+https://trabajo-final-grupal.netlify.app
