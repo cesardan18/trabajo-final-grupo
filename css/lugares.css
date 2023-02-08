@@ -8,6 +8,7 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+/* BARRA DE SCROLL PERSONALIZADA */
 body::-webkit-scrollbar {
     width: 15px;
 }
@@ -19,6 +20,8 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background-color: #220958;
 }
+
+/**/
 
 nav {
     background-color: #270570;
@@ -48,6 +51,7 @@ nav {
 
 /**/
 
+
 /* PARALLAX */
 .parallax,
 .parallax2,
@@ -55,17 +59,17 @@ nav {
 .parallax4,
 .parallax5,
 .parallax6 {
-    /* The image used */
+    /* IMAGEN USADA */
     opacity: 90%;
     border-radius: 2rem;
-    /* Set a specific height */
+    /* ALTURA ESPECÍFICA */
     min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    /* Create the parallax scrolling effect */
+    /* EFECTO PARALLAX */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -78,18 +82,21 @@ nav {
     border-radius: 1.25rem;
     background: rgba(240, 230, 220, .7);
     box-shadow: 0 0 8px rgba(0, 0, 0, .7);
-    /* Create the parallax scrolling effect */
+    /* EFETCO PARALLAX */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+/* MEDIAQUERY RESPONSIVE PARA CONTENEDOR DE CARD */
 @media (max-width: 700px) {
     .title {
         width: 90%;
     }
 }
+
+/**/
 
 /* IMÁGEN DE PARALLAX */
 .parallax {
